@@ -40,7 +40,9 @@ The Windows Autopilot white glove feature has been renamed to **Windows Autopilo
 
 With this release, you can configure Windows Autopilot [user-driven](user-driven.md) Hybrid Azure Active Directory join with VPN support. This support is also backported to Windows 10, version 1909 and 1903.
 
-If you configure the language settings in the Autopilot profile and the device is connected to Ethernet, all scenarios will now skip the language, locale, and keyboard pages. In previous versions, this was only supported with self-deploying profiles.
+If you configure the language settings in the Autopilot profile and the device is connected to Ethernet, all scenarios will now skip the language, locale, keyboard & autopilot configuration pages. you won’t be able to initiate a white glove deployment as the Out Of Box Experience (OOBE) screen will automatically progress past the point where you can press the Windows key five times.
+
+If you want to automatically choose a language, don’t do white glove; if you want to do white glove, don’t configure these.  We’ll try to remove this restriction in a future release.  (Alternatively, you could choose not to make a network connection, e.g. don’t connect the Ethernet cable, until after you’ve pressed the Windows key five times.)
 
 ## New in Windows 10, version 1903
 
